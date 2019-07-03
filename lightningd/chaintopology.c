@@ -139,7 +139,7 @@ static void broadcast_remainder(struct bitcoind *bitcoind,
 			  "Expected error broadcasting tx %s: %s",
 			  txs->txs[txs->cursor], msg);
 	else if (exitstatus)
-		log_unusual(bitcoind->log, "Broadcasting tx %s: %i %s",
+		log_info(bitcoind->log, "Broadcasting tx %s: %i %s",
 			    txs->txs[txs->cursor], exitstatus, msg);
 
 	txs->cursor++;
